@@ -26,38 +26,37 @@ namespace NaryTreePostorder
     }
 
 
-public class Solution
+    public class Solution
     {
-        public IList<int> Preorder(Node root)
+        public IList<int> Postorder(Node root)
         {
-    
-
-            List<int> output = new List<int>();
 
             if (root == null)
-                return output;
+                return new List<int>();
 
+            var stack = new Stack<Node>();
+            stack.Push(root);
+            LinkedList<int> result = new LinkedList<int>();
 
-            TraverseNodes(root, output);
-              
-
- 
- 
-
-            return output;
-            
-        }
-
-        private void TraverseNodes(Node root, List<int> output)
-        {
-            if (root.children == null)
-                return;
-            output.Add(root.val);
-            foreach (var child in root.children)
+            while (stack.Count > 0)
             {
-                TraverseNodes(child, output);
+                var node = stack.Pop();
+                result.AddFirst(node.val);
+                if (node.children!=null)
+                {
+                    foreach (var item in node.children)
+                    {
+                        stack.Push(item);
+                    }
+                    
+                }
 
             }
+
+            return result.ToList();
+    
+
         }
+
     }
 }
