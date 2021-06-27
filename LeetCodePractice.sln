@@ -23,7 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTreeInorder", "Binary
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeTwoBinaryTrees", "MergeTwoBinaryTrees\MergeTwoBinaryTrees.csproj", "{6A63D1C1-AA56-4A40-8D66-BDD7B9740148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvertBinaryTree", "InvertBinaryTree\InvertBinaryTree.csproj", "{BC6EE455-33DA-45D7-8930-0FC86235E3B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvertBinaryTree", "InvertBinaryTree\InvertBinaryTree.csproj", "{BC6EE455-33DA-45D7-8930-0FC86235E3B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AlgoExpert", "AlgoExpert", "{443A27E4-78E1-45E5-859D-AA152DCB39A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeNumberSum", "ThreeNumberSum\ThreeNumberSum.csproj", "{DA2D9E41-4396-4614-BE7E-8C6825EB14E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallestNumber", "SmallestNumber\SmallestNumber.csproj", "{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayAllProblems", "ArrayAllProblems\ArrayAllProblems.csproj", "{C99755CE-D002-4607-8BAF-10C53777D1C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,9 +83,26 @@ Global
 		{BC6EE455-33DA-45D7-8930-0FC86235E3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC6EE455-33DA-45D7-8930-0FC86235E3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC6EE455-33DA-45D7-8930-0FC86235E3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
+		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
+		{C99755CE-D002-4607-8BAF-10C53777D1C6} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89829166-E56E-4354-A1B0-40A8C8C296B9}
