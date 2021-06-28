@@ -36,5 +36,37 @@ namespace ArrayAllProblems
             return arr;
         }
 
+        public bool IsMonotonicArray(int[] arr)
+        {
+            bool increasingMonotonic = true;
+            bool decreasingMonotonic = true;
+
+
+
+            //1 1 2 3 5 6 7
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+
+
+                if (arr[i] >= arr[i+1])
+                {
+                    increasingMonotonic = false;
+                }
+                else if (arr[i] <= arr[i + 1])
+                {
+                    decreasingMonotonic = false;
+                }
+                else
+                {
+                    decreasingMonotonic = false;
+                    increasingMonotonic = false;
+                    break;
+                }
+
+
+            }
+
+            return ( increasingMonotonic || decreasingMonotonic);
+        }
     }
 }
