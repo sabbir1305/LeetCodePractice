@@ -20,6 +20,24 @@ namespace ArrayAllProblems
             var isMonotonic = solution.IsMonotonicArray(arr);
             Console.WriteLine(isMonotonic);
             
+            Console.WriteLine("Spilral:-----");
+            int[,] arrSpiral = new int[,] { 
+                { 1, 2, 3, 4 },
+                { 5, 6, 7, 8 }, 
+                { 9, 10, 12, 13 } };
+
+            var singleArray = solution.SpiralTraverse(arrSpiral);
+            foreach (var item in singleArray)
+            {
+                Console.Write(" " + item);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Longest Peek -----");
+            int[] peeks = new int[] {1,2,3,3,4,0,10,2,5,-1,-3,-4,3 };
+            var maxPeekLength= solution.LongestPeek(peeks);
+            Console.WriteLine("Peek:.'{0}'.",maxPeekLength);
+            Console.WriteLine("Peek:....-'{0}'-....'.", solution.LongestPeek2(peeks));
+
         }
     }
 }
