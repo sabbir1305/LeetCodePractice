@@ -38,6 +38,11 @@ namespace ArrayAllProblems
             Console.WriteLine("Peek:.'{0}'.",maxPeekLength);
             Console.WriteLine("Peek:....-'{0}'-....'.", solution.LongestPeek2(peeks));
 
+            Console.WriteLine("Sorted Subarray-----Indez");
+
+            var sortedIndex = solution.SubArraySort(new int[]{1,2,4,7,10,11,7,12,6,7,16,18,19 });
+            Console.WriteLine("[{0},{1}]",sortedIndex.Item1,sortedIndex.Item2);
+
         }
     }
 }

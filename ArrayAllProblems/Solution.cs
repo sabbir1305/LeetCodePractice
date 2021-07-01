@@ -196,5 +196,54 @@ namespace ArrayAllProblems
 
             return maxPeek;
         }
+    
+    public (int,int) SubArraySort(int[] arr)
+        {
+            int minOutOrder=int.MaxValue, maxOutOrder=int.MinValue;
+
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                if (IsOutOfOrder(i, arr))
+                {
+                    minOutOrder = arr[i] < minOutOrder ? arr[i] : minOutOrder;
+                    maxOutOrder = arr[i] > maxOutOrder ? arr[i] : maxOutOrder;
+                }
+            }
+            int leftIndex = 0;
+
+            while (minOutOrder>=arr[leftIndex])
+            {
+                leftIndex++;
+            }
+            int rightIndex = arr.Length-1;
+            while (maxOutOrder<=arr[rightIndex])
+            {
+                rightIndex--;
+            }
+
+            if(minOutOrder==int.MinValue) return (-1, -1);
+
+            return (leftIndex, rightIndex);
+            
+
+           
+
+        }
+
+        private bool IsOutOfOrder(int i, int[] arr)
+        {
+            if (i == 0)
+            {
+                return arr[i] > arr[i + 1];
+            }
+            else if (i == arr.Length - 1)
+            {
+                return arr[arr.Length - 1] < arr[i - 1];
+            }
+            else
+            {
+                return arr[i] > arr[i + 1] || arr[i] < arr[i - 1];
+            }
+        }
     }
 }
