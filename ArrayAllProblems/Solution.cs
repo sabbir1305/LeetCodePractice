@@ -197,7 +197,7 @@ namespace ArrayAllProblems
             return maxPeek;
         }
     
-    public (int,int) SubArraySort(int[] arr)
+        public (int,int) SubArraySort(int[] arr)
         {
             int minOutOrder=int.MaxValue, maxOutOrder=int.MinValue;
 
@@ -245,5 +245,89 @@ namespace ArrayAllProblems
                 return arr[i] > arr[i + 1] || arr[i] < arr[i - 1];
             }
         }
+    
+        public (int,int) LargestRange(int[] arr)
+        {
+            int longestLength = 0;
+            var bestRange = (0,0);
+            var nums = new Dictionary<int,bool>();
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                nums[arr[i]] = true;
+            }
+
+            foreach (var num in arr)
+            {
+                if (!nums[num])
+                    continue;
+                int currentLength = 1;
+                int left = num - 1;
+                int right = num + 1;
+
+                while (nums.ContainsKey(left))
+                {
+                    nums[left] = false;
+                    left--;
+                    currentLength++;
+                }
+                while (nums.ContainsKey(right))
+                {
+                    nums[right] = false;
+                    currentLength++;
+                    right++;
+                }
+
+                if (currentLength > longestLength)
+                {
+                    longestLength = currentLength;
+                    bestRange = (left + 1, right + 1);
+                }
+
+            }
+            return bestRange;
+        }
+
+        #region minRewards
+            
+        //Naive O(n^2)
+        public int MinRewards(int[] scores)
+        {
+            int[] rewards = new int[] { };
+            for (int i = 0; i < scores.Length; i++)
+            {
+                rewards[i] = 1;
+            }
+
+            for (int i = 1; i < scores.Length; i++)
+            {
+                int j = i - 1;
+                if (scores[i] > scores[j])
+                {
+                    rewards[i] = rewards[j] + 1;
+                }
+                else
+                {
+                    while (j>=0 && scores[j] > scores[j+1])
+                    {
+                        rewards[j] = GetMax(rewards[j], rewards[j + 1] + 1);
+                        j--;
+                    }
+                }
+
+               
+            }
+
+            return rewards.Sum();
+
+        }
+        #endregion
+
+
+        private int GetMax(int num1,int num2)
+        {
+            return num1 > num2 ? num1 : num2;
+        }
+        
     }
 }
