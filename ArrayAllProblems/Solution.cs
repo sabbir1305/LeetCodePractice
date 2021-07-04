@@ -323,6 +323,97 @@ namespace ArrayAllProblems
         }
         #endregion
 
+        public int MinRewardsTwo(int[] scores)
+        {
+            int[] rewards = new int[] { };
+            for (int i = 0; i < scores.Length; i++)
+            {
+                rewards[i] = 1;
+            }
+            for (int i = 1; i < scores.Length; i++)
+            {
+                if (scores[i] > scores[i - 1])
+                {
+                    rewards[i] = rewards[i - 1] + 1;
+                }
+            }
+
+            for (int i = scores.Length-1; i >= 0; i--)
+            {
+                if(scores[i] > scores[i + 1])
+                {
+                    rewards[i] = this.GetMax(rewards[i], rewards[i + 1] + 1);
+                }
+            }
+            return rewards.Sum();
+
+        }
+
+
+        public List<int> ZigZag(int[,] arr)
+        {
+            int height = arr.GetLength(0)-1;
+            int width = arr.GetLength(1)-1;
+            List<int> result = new List<int>();
+            int row = 0, col = 0;
+            bool goingDown = true;
+            while (!IsOutOfBound(row,col,height,width))
+            {
+                result.Add(arr[row, col]);
+                if (goingDown)
+                {
+                    if (col == 0 || row == height)
+                    {
+                        goingDown = false;
+                        if (row == height)
+                        {
+                            col++;
+                        }
+                        else
+                        {
+                            row++;
+                        }
+                    }
+                    else
+                    {
+                        row++;
+                        col--;
+                    }
+                }
+                else
+                {
+                    if (col == width || row == 0)
+                    {
+                        goingDown = true;
+                        if (col == width)
+                        {
+                            row--;
+                        }
+                        else
+                        {
+                            col++;
+                        }
+                    }
+                    else
+                    {
+                        row--;
+                        col++;
+                    }
+                }
+              
+            }
+
+
+            return result;
+        }
+
+        private bool IsOutOfBound(int row,int col,int heigh , int width)
+        {
+            return row < 0 || row > heigh || col < 0 || col > width;
+        }
+
+
+
 
         private int GetMax(int num1,int num2)
         {
