@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeNumberSum", "ThreeNumb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmallestNumber", "SmallestNumber\SmallestNumber.csproj", "{1A3C2B35-0F43-4DD8-9026-2D614FEAA431}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayAllProblems", "ArrayAllProblems\ArrayAllProblems.csproj", "{C99755CE-D002-4607-8BAF-10C53777D1C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayAllProblems", "ArrayAllProblems\ArrayAllProblems.csproj", "{C99755CE-D002-4607-8BAF-10C53777D1C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSTConstruction", "BSTConstruction\BSTConstruction.csproj", "{5BDD7395-F1CA-450D-9F36-62461339BD3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C99755CE-D002-4607-8BAF-10C53777D1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BDD7395-F1CA-450D-9F36-62461339BD3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDD7395-F1CA-450D-9F36-62461339BD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDD7395-F1CA-450D-9F36-62461339BD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BDD7395-F1CA-450D-9F36-62461339BD3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{DA2D9E41-4396-4614-BE7E-8C6825EB14E7} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
 		{1A3C2B35-0F43-4DD8-9026-2D614FEAA431} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
 		{C99755CE-D002-4607-8BAF-10C53777D1C6} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
+		{5BDD7395-F1CA-450D-9F36-62461339BD3F} = {443A27E4-78E1-45E5-859D-AA152DCB39A3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89829166-E56E-4354-A1B0-40A8C8C296B9}
