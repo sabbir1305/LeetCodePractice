@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,19 @@ using System.Threading.Tasks;
 
 namespace BSTConstruction
 {
-  public  class BinarySearchTree
+
+  public class TreeNode {
+      public int val;
+      public TreeNode left;
+     public TreeNode right;
+      public TreeNode(int val=0, TreeNode left=null, TreeNode right=null) {
+          this.val = val;
+         this.left = left;
+          this.right = right;
+      }
+  }
+
+    public class BinarySearchTree
     {
       public  class Node
         {
@@ -19,6 +32,7 @@ namespace BSTConstruction
             }
           
         }
+
 
         public Node root;
         public BinarySearchTree()
@@ -193,5 +207,55 @@ namespace BSTConstruction
             }
             return current.Data;
         }
+    
+    
+        private IList<IList<int>> LevelOrderTraversal(TreeNode root)
+        {
+  
+            //var result = new List<IList<int>>();
+            //Queue<Node> queue = new Queue<Node>();
+            //queue.Enqueue(root);
+            //while (queue.Count>0)
+            //{
+            //    var currentLevel = new List<int>();
+            //    var size = queue.Count;
+            //    for (int i = 0; i < size; i++)
+            //    {
+            //        var cNode = queue.Dequeue();
+            //        currentLevel.Add(cNode.Data);
+            //        if (cNode.Left != null) queue.Enqueue(cNode.Left);
+            //        if (cNode.Right != null) queue.Enqueue(cNode.Right);
+            //    }
+            //    result.Add(currentLevel);
+            //}
+
+
+            //return result;
+
+
+            if (root == null) return null;
+            IList<IList<int>> result = new List<IList<int>>();
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
+            {
+                var currentLevel = new List<int>();
+                var size = queue.Count;
+                for (int i = 0; i < size; i++)
+                {
+                    var currentNode = queue.Dequeue();
+                    currentLevel.Add(currentNode.val);
+                    if (currentNode.left != null) queue.Enqueue(currentNode.left);
+                    if (currentNode.right != null) queue.Enqueue(currentNode.right);
+                }
+                result.Add(currentLevel);
+            }
+
+
+            return result;
+        }
+
+
+    
     }
 }
