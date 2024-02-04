@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "392", "392\392.csproj", "{9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "383RansomNote", "383RansomNote\383RansomNote.csproj", "{30491237-C9E4-4678-969A-D2D4034CE4C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "205IsomorphicStrings", "205IsomorphicStrings\205IsomorphicStrings.csproj", "{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "205IsomorphicStrings", "205IsomorphicStrings\205IsomorphicStrings.csproj", "{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "290WordPattern", "290WordPattern\290WordPattern.csproj", "{B2064492-7349-4DC0-8534-104F2C8F34D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,10 @@ Global
 		{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2064492-7349-4DC0-8534-104F2C8F34D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2064492-7349-4DC0-8534-104F2C8F34D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2064492-7349-4DC0-8534-104F2C8F34D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2064492-7349-4DC0-8534-104F2C8F34D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -161,6 +167,7 @@ Global
 		{9B42EACF-974D-4177-870A-868659220E2A} = {146E9F61-B0B2-46E3-903A-E1B54090A7A2}
 		{30491237-C9E4-4678-969A-D2D4034CE4C1} = {146E9F61-B0B2-46E3-903A-E1B54090A7A2}
 		{6534CFB9-0BE6-46E0-BE7C-9E9EDE336576} = {146E9F61-B0B2-46E3-903A-E1B54090A7A2}
+		{B2064492-7349-4DC0-8534-104F2C8F34D4} = {146E9F61-B0B2-46E3-903A-E1B54090A7A2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89829166-E56E-4354-A1B0-40A8C8C296B9}
